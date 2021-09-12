@@ -47,3 +47,4 @@ pnpm-debug.log*
 
 .gradle/
 package-lock.json
+build/
