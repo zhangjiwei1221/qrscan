@@ -48,3 +48,7 @@ pnpm-debug.log*
 .gradle/
 package-lock.json
 build/
+/captures
+.externalNativeBuild
+.cxx
+local.properties
