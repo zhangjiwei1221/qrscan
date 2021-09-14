@@ -1,8 +1,8 @@
 package cn.butterfly.qrscan.filter;
 
 import cn.butterfly.qrscan.base.BaseResult;
+import cn.butterfly.qrscan.util.JsonUtils;
 import cn.butterfly.qrscan.util.JwtUtils;
-import com.google.gson.Gson;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -22,12 +22,6 @@ import static cn.butterfly.qrscan.constant.BaseConstants.*;
 @Configuration
 public class HttpInterceptor implements HandlerInterceptor {
 
-    private final Gson gson;
-
-    public HttpInterceptor(Gson gson) {
-        this.gson = gson;
-    }
-
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
         // 放开 options 请求
@@ -45,7 +39,7 @@ public class HttpInterceptor implements HandlerInterceptor {
         if (JwtUtils.verify(token)) {
             return true;
         }
-        response.getWriter().write(gson.toJson(BaseResult.error(ILLEGAL_TOKEN)));
+        response.getWriter().write(JsonUtils.stringify(BaseResult.error(ILLEGAL_TOKEN)));
         return false;
     }
 

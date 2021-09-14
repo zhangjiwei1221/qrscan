@@ -26,9 +26,17 @@ dependencies {
     implementation 'org.hibernate.validator:hibernate-validator:6.1.5.Final'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'org.apache.commons:commons-pool2:2.8.1'
+    implementation 'eu.bitwalker:UserAgentUtils:1.21'
+    implementation 'cn.hutool:hutool-all:5.5.5'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'cn.butterfly.qrscan.QrscanBackApplication'
+    }
 }
 
 test {

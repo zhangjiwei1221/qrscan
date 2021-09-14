@@ -54,4 +54,30 @@ public class BaseConstants {
 
     public static final String ALL = "*";
 
+    public static final String USER_AGENT_HEADER = "User-Agent";
+
+    public static final String UNKNOWN_IP = "unknown";
+
+    public static final String UNKNOWN_ADDRESS = "XX XX";
+
+    public static final String IPV4_LOCAL_IP = "127.0.0.1";
+
+    public static final String IPV6_LOCAL_IP = "0:0:0:0:0:0:0:1";
+
+    public static final String X_FORWARDED_FOR = "x-forwarded-for";
+
+    public static final String PROXY_CLIENT_IP = "Proxy-Client-IP";
+
+    public static final String WL_PROXY_CLIENT_IP = "WL-Proxy-Client-IP";
+
+    public static final String X_REAL_IP = "X-Real-IP";
+
+    public static final String INTERNAL_IP_MSG = "内网IP";
+
+    public static final String DATE_TIME_FORMAT_PATTERN = "yyyy-MM-dd HH:mm:ss";
+
+    public static final String QUERY_IP_URL_FORMAT = "http://whois.pconline.com.cn/ipJson.jsp?ip=%s&json=true";
+
+    public static final int DEFAULT_TIMEOUT = 5000;
+
 }
