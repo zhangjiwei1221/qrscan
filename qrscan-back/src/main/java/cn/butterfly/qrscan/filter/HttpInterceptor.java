@@ -39,7 +39,7 @@ public class HttpInterceptor implements HandlerInterceptor {
         if (JwtUtils.verify(token)) {
             return true;
         }
-        response.getWriter().write(JsonUtils.stringify(BaseResult.error(ILLEGAL_TOKEN)));
+        response.getWriter().write(JsonUtils.stringify(BaseResult.error(AUTHENTICATION_FAILED)));
         return false;
     }
 

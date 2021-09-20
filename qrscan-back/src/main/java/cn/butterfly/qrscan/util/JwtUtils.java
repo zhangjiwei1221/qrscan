@@ -1,14 +1,11 @@
 package cn.butterfly.qrscan.util;
 
-import cn.butterfly.qrscan.entity.User;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import org.apache.commons.lang3.StringUtils;
-
 import java.util.Date;
-
 import static cn.butterfly.qrscan.constant.BaseConstants.SECRET;
 import static cn.butterfly.qrscan.constant.BaseConstants.USERNAME;
 
@@ -31,12 +28,12 @@ public class JwtUtils {
     /**
      * 生成 token
      *
-     * @param user 用户
+     * @param username 用户名
      * @return token
      */
-    public static String sign(User user) {
+    public static String sign(String username) {
         Date date = new Date(System.currentTimeMillis() + EXPIRE_TIME);
-        return createToken(user.getUsername(), date);
+        return createToken(username, date);
     }
 
     /**

@@ -12,6 +12,8 @@ public class BaseConstants {
 
     public static final String USERNAME = "username";
 
+    public static final String DEFAULT_PASSWORD = "123456";
+
     public static final int SUCCESS = 200;
 
     public static final int ERROR = 500;
@@ -24,15 +26,11 @@ public class BaseConstants {
 
     public static final String AUTHORIZATION = "Authorization";
 
-    public static final String ILLEGAL_TOKEN = "非法 token";
-
     public static final String LOGIN_FAILED = "用户名或密码错误";
 
     public static final String USERNAME_CANT_EMPTY = "用户名不可为空";
 
     public static final String PASSWORD_CANT_EMPTY = "密码不可为空";
-
-    public static final String VERIFY_API_PREFIX = "/verify";
 
     public static final String ALL_PATTERN = "/**";
 
@@ -79,5 +77,28 @@ public class BaseConstants {
     public static final String QUERY_IP_URL_FORMAT = "http://whois.pconline.com.cn/ipJson.jsp?ip=%s&json=true";
 
     public static final int DEFAULT_TIMEOUT = 5000;
+
+    public static final String DEFAULT_AVATAR_URL = "http://localhost:8080/static/avatar.jpg";
+
+    public static final int DEFAULT_QR_EXPIRE_SECONDS = 60;
+
+    public static final int DEFAULT_TEMP_TOKEN_EXPIRE_MINUTES = 10;
+
+    public static final String GENERATE_SUCCESS = "生成二维码成功";
+
+    public static final String REDIRECT_SUCCESS = "重定向成功";
+
+    public static final String REDIRECT_FAILED = "重定向失败";
+
+    public static final String INVALID_CODE = "无效二维码";
+
+    public static final String SCAN_SUCCESS = "扫码成功";
+
+    public static final String LOGIN_SUCCESS = "登录成功";
+
+    public static final String AUTHENTICATION_FAILED = "身份验证失败";
+
+    public static final String BLOG_URL = "https://juejin.cn/user/3350967174567352";
+
 
 }

@@ -36,9 +36,10 @@ public class LoginController {
      */
     @PostMapping("/login")
     public BaseResult login(@RequestBody @Validated User user) {
-        User tmpUser = userService.getByUsername(user.getUsername());
+        String username = user.getUsername();
+        User tmpUser = userService.getByUsername(username);
         if (tmpUser != null && Objects.equals(user.getPassword(), tmpUser.getPassword())) {
-            return BaseResult.success(JwtUtils.sign(user));
+            return BaseResult.success(JwtUtils.sign(username));
         }
         return BaseResult.error(LOGIN_FAILED);
     }

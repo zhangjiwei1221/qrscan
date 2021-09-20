@@ -1,6 +1,10 @@
 package cn.butterfly.qrscan.util;
 
+import cn.butterfly.qrscan.entity.User;
+import cn.butterfly.qrscan.service.IUserService;
+import cn.butterfly.qrscan.service.impl.UserServiceImpl;
 import cn.hutool.core.net.NetUtil;
+import cn.hutool.extra.spring.SpringUtil;
 import cn.hutool.http.HttpUtil;
 import eu.bitwalker.useragentutils.UserAgent;
 import lombok.Data;
@@ -8,9 +12,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-
 import javax.servlet.http.HttpServletRequest;
-
 import static cn.butterfly.qrscan.constant.BaseConstants.*;
 
 /**
@@ -101,6 +103,20 @@ public class HttpUtils {
         } catch (Exception e) {
             return UNKNOWN_ADDRESS;
         }
+    }
+
+    /**
+     * 获取当前登录的用户名
+     *
+     * @return 用户名
+     */
+    public static String getCurrentUsername() {
+        HttpServletRequest request = getRequest();
+        if (request == null) {
+            return null;
+        }
+        String token = request.getHeader(AUTHORIZATION);
+        return JwtUtils.getUsername(token);
     }
 
     /**

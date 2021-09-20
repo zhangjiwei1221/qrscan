@@ -29,7 +29,13 @@ public class User {
     /**
      * 密码
      */
+
     @NotBlank(message = PASSWORD_CANT_EMPTY)
     private String password;
+
+    /**
+     * 头像
+     */
+    private String avatar;
 
 }
