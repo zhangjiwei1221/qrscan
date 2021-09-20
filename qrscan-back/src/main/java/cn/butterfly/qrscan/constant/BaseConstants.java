@@ -96,6 +96,8 @@ public class BaseConstants {
 
     public static final String LOGIN_SUCCESS = "登录成功";
 
+    public static final String GET_SUCCESS = "获取成功";
+
     public static final String AUTHENTICATION_FAILED = "身份验证失败";
 
     public static final String BLOG_URL = "https://juejin.cn/user/3350967174567352";
