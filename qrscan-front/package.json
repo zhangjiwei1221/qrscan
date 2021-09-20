@@ -8,13 +8,21 @@
   },
   "dependencies": {
     "core-js": "^3.17.3",
+    "normalize.css": "^8.0.1",
+    "axios": "^0.21.1",
+    "vue-router": "^3.2.0",
+    "element-ui": "^2.15.0",
+    "vuex": "^3.6.2",
+    "gsap": "^3.6.0",
     "vue": "^2.6.14"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.13",
-    "@vue/cli-service": "^4.5.13",
-    "@vue/compiler-sfc": "^3.2.11",
-    "vue-template-compiler": "^2.6.14"
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-plugin-component": "^1.1.1",
+    "less-loader": "^6.2.0",
+    "vue-template-compiler": "^2.6.12"
   },
   "browserslist": [
     "> 1%",
