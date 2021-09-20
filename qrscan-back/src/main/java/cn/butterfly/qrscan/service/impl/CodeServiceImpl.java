@@ -92,10 +92,10 @@ public class CodeServiceImpl implements ICodeService {
         if (StringUtils.isBlank(username)) {
             return BaseResult.error(AUTHENTICATION_FAILED);
         }
-        CodeVO codeVO = CodeUtils.getConfirmedCodeInfo(username, DEFAULT_AVATAR_URL);
-        redisCache.setCacheObject(code, codeVO, DEFAULT_QR_EXPIRE_SECONDS, TimeUnit.SECONDS);
         String formalToken = JwtUtils.sign(username);
-        return BaseResult.success(formalToken);
+        CodeVO codeVO = CodeUtils.getConfirmedCodeInfo(username, DEFAULT_AVATAR_URL, formalToken);
+        redisCache.setCacheObject(code, codeVO, DEFAULT_QR_EXPIRE_SECONDS, TimeUnit.SECONDS);
+        return BaseResult.success(CONFIRM_SUCCESS);
     }
 
 }

@@ -48,8 +48,6 @@ public class BaseConstants {
 
     public static final String RESOURCE_LOCATION = "classpath:/static/";
 
-    public static final String FRONT_URL = "http://localhost";
-
     public static final String ALL = "*";
 
     public static final String USER_AGENT_HEADER = "User-Agent";
@@ -93,6 +91,8 @@ public class BaseConstants {
     public static final String INVALID_CODE = "无效二维码";
 
     public static final String SCAN_SUCCESS = "扫码成功";
+
+    public static final String CONFIRM_SUCCESS = "确认成功";
 
     public static final String LOGIN_SUCCESS = "登录成功";
 

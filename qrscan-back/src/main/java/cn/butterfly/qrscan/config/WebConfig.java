@@ -28,7 +28,7 @@ public class WebConfig extends WebMvcConfigurationSupport {
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
 		registry.addMapping(ALL_PATTERN)
-				.allowedOrigins(FRONT_URL)
+				.allowedOrigins(ALL)
 				.allowedMethods(HttpMethod.POST.name(), HttpMethod.GET.name(), HttpMethod.OPTIONS.name())
 				.exposedHeaders(AUTHORIZATION)
 				.allowedHeaders(ALL);

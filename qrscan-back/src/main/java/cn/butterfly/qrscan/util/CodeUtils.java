@@ -47,10 +47,11 @@ public class CodeUtils {
      *
      * @param username 用户名
      * @param avatar 头像
+     * @param token token
      * @return 二维码值对象
      */
-    public static CodeVO getConfirmedCodeInfo(String username, String avatar) {
-        return new CodeVO(CodeStatus.CONFIRMED, username, avatar);
+    public static CodeVO getConfirmedCodeInfo(String username, String avatar, String token) {
+        return new CodeVO(CodeStatus.CONFIRMED, username, avatar, token);
     }
 
 }

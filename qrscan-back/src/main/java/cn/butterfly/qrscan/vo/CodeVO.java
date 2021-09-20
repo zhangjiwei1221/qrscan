@@ -31,8 +31,19 @@ public class CodeVO {
      */
     private String avatar;
 
+    /**
+     * 正式 token
+     */
+    private String token;
+
     public CodeVO(CodeStatus codeStatus) {
         this.codeStatus = codeStatus;
+    }
+
+    public CodeVO(CodeStatus codeStatus, String username, String avatar) {
+        this.codeStatus = codeStatus;
+        this.username = username;
+        this.avatar = avatar;
     }
 
 }

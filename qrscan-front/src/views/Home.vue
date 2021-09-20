@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-    <main>
-      main
-    </main>
+    <img src="../assets/img/bg.jpg"/>
   </div>
 </template>
 
@@ -12,7 +10,10 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-@blue: #409EFF;
-
+<style scoped>
+.home {
+  width: 100%;
+  text-align: center;
+  margin-top: calc(50vh - 386px);
+}
 </style>

@@ -6,6 +6,7 @@ import cn.butterfly.qrscan.service.ICodeService;
 import cn.butterfly.qrscan.util.CodeUtils;
 import cn.butterfly.qrscan.vo.CodeVO;
 import cn.hutool.core.util.IdUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -70,7 +71,7 @@ public class CodeController {
     public BaseResult info(String code) {
         CodeVO codeVO = redisCache.getCacheObject(code);
         if (codeVO == null) {
-            return BaseResult.error(INVALID_CODE);
+            return BaseResult.success(INVALID_CODE, StringUtils.EMPTY);
         }
         return BaseResult.success(GET_SUCCESS, codeVO);
     }

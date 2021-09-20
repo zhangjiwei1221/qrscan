@@ -1,16 +1,14 @@
 import {
-  API,
+  HOST,
   TOKEN,
   TIME_OUT
 } from '@/assets/js/const'
 import axios from 'axios'
-import store from '@/store'
-import router from '@/router'
 
 export function request(config) {
 
   const req = axios.create({
-    baseURL: API,
+    baseURL: HOST,
     timeout: TIME_OUT
   })
 
@@ -20,21 +18,7 @@ export function request(config) {
     return config
   })
 
-  req.interceptors.response.use(response => {
-    const token = response.headers.authorization
-    if (token) {
-      store.commit('setToken', token)
-    } else {
-      store.commit('removeToken')
-      const history = router.history
-      if (history && history.current) {
-        !['/login'].includes(history.current.path) && router.push('/login')
-      }
-    }
-    return response.data
-  }, () => {
-    router.push('/home')
-  })
+  req.interceptors.response.use(response => response.data)
 
   return req(config)
 }
