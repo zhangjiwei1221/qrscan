@@ -8,17 +8,49 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello, world!"/>
+        android:paddingTop="50sp"
+        android:text="登录"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="请输入用户名"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:layout_marginTop="30sp"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:layout_marginTop="30sp"
+        android:textSize="24sp"/>
 
     <Button
-        style="@style/Button.Radius"
-        android:layout_width="wrap_content"
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="submit"/>
+        android:layout_marginTop="30sp"
+        android:background="#2196F3"
+        android:text="登录"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:onClick="login"/>
 
 </LinearLayout>

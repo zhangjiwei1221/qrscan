@@ -2,7 +2,6 @@ package cn.butterfly.qrscan.config;
 
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
-
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -21,14 +20,14 @@ public class RedisCache {
     }
 
     /**
-     * 缓存基本的对象，Integer、String、实体类等
+     * 获得缓存的基本对象
      *
-     * @param key 缓存的键值
-     * @param value 缓存的值
+     * @param key 缓存键值
+     * @return 缓存键值对应的数据
      */
-    public <T> void setCacheObject(String key, T value)
-    {
-        redisTemplate.opsForValue().set(key, value);
+    @SuppressWarnings("unchecked")
+    public <T> T getCacheObject(String key) {
+        return (T) redisTemplate.opsForValue().get(key);
     }
 
     /**
@@ -44,14 +43,12 @@ public class RedisCache {
     }
 
     /**
-     * 获得缓存的基本对象
+     * 根据键删除缓存对象
      *
-     * @param key 缓存键值
-     * @return 缓存键值对应的数据
+     * @param key 缓存键
      */
-    @SuppressWarnings("unchecked")
-    public <T> T getCacheObject(String key) {
-        return (T) redisTemplate.opsForValue().get(key);
+    public void deleteObject(String key) {
+        redisTemplate.delete(key);
     }
 
 }

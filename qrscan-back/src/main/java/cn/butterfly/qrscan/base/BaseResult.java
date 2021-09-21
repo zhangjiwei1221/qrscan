@@ -17,10 +17,19 @@ import static cn.butterfly.qrscan.constant.BaseConstants.SUCCESS;
 @AllArgsConstructor
 public class BaseResult {
 
+    /**
+     * 状态码
+     */
     private Integer code;
 
+    /**
+     * 信息
+     */
     private String message;
 
+    /**
+     * 数据
+     */
     private Object data;
 
     private BaseResult() {}
