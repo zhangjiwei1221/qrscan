@@ -1,18 +1,14 @@
 package cn.butterfly.qrscan.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import android.Manifest;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
-
 import com.xuexiang.xui.XUI;
-
-import org.apache.commons.lang3.StringUtils;
-
 import cn.butterfly.qrscan.R;
 
 /**
@@ -28,6 +24,10 @@ public class HomeActivity extends AppCompatActivity {
         XUI.initTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        int hasWriteStoragePermission = ContextCompat.checkSelfPermission(getApplication(), Manifest.permission.CAMERA);
+        if (hasWriteStoragePermission != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(HomeActivity.this, new String[]{Manifest.permission.CAMERA}, 0);
+        }
     }
 
     /**

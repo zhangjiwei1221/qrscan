@@ -1,24 +1,16 @@
 package cn.butterfly.qrscan.activity;
 
 import static cn.butterfly.qrscan.base.BaseConstants.API;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.xuexiang.xui.XUI;
 import com.yutils.http.YHttp;
 import com.yutils.http.contract.YHttpListener;
-
-import java.util.Map;
-
 import cn.butterfly.qrscan.R;
-import cn.butterfly.qrscan.base.BaseResult;
-import cn.butterfly.qrscan.util.JsonUtils;
 
 /**
  * 确认登录界面

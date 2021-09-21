@@ -1,7 +1,6 @@
 package cn.butterfly.qrscan.activity;
 
 import static cn.butterfly.qrscan.base.BaseConstants.API;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
