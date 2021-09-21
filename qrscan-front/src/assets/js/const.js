@@ -1,4 +1,4 @@
 export let WEBSITE_NAME =  'QRSCAN'
-export let TOKEN =  'Authorization'
-export let HOST = 'http://localhost:8080'
+export let TOKEN =  'authorization'
+export let HOST = 'http://47.116.72.33:8080'
 export let TIME_OUT = 15000
