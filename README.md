@@ -1,6 +1,6 @@
 ## 前言
 
-本文将介绍基于`SpringBoot + Vue + Android`实现的扫码登录`demo`的总体思路，完整代码已上传到[GitHub](https://github.com/zhangjiwei1221/qrscan)。`Web`端体验地址：http://47.116.72.33/（只剩一个月有效期），`apk`下载地址：https://github.com/zhangjiwei1221/qrscan/releases/tag/0.0.1。用户名：非空即可，密码：123456，效果见文末，整体实现如有不妥之处，欢迎交流讨论，实现部分参考[二维码扫码登录是什么原理](https://juejin.cn/post/6940976355097985032)。
+本文将介绍基于`SpringBoot + Vue + Android`实现的扫码登录`demo`的总体思路，完整代码已上传到[GitHub](https://github.com/zhangjiwei1221/qrscan)。`Web`端体验地址：http://47.116.72.33/（只剩一个月有效期）， `apk`下载地址：https://github.com/zhangjiwei1221/qrscan/releases/tag/0.0.1 。用户名：非空即可，密码：123456，效果见文末，整体实现如有不妥之处，欢迎交流讨论，实现部分参考[二维码扫码登录是什么原理](https://juejin.cn/post/6940976355097985032)。
 
 
 
